@@ -27,10 +27,18 @@ app.use("/api/v1/profile", profileRouter)
 app.use("/api/v1/uploadFile", uploadFileRouter)
 
 // Add React Front End Routing
-//const __dirname = import.meta.dirname;
-//app.get('*',function (req,res) {
-    //res.sendFile(path.resolve(__dirname,'client','dist','index.html'))
-//})
+const _dirname=path._dirname("");
+const buildPath =path.join(_dirname,"../frontend/dist");
+
+app.use(express.static(buildPath));
+
+app.get("/",function(req,res,next){
+  res.sendFile(path.join(__dirname,"../frontend/dist/index.html"),function(err){
+    if(err){
+        res.static(500).send(err);
+    }
+  });
+});
 
 // http://localhost:8000/api/v1/user/register
 
