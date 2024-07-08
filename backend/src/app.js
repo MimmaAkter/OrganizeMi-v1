@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
-//import path from 'path'
+import path from 'path'
 
 const app = express()
 
@@ -39,7 +39,6 @@ app.get("/",function(req,res,next){
     }
   });
 });
-
 // http://localhost:8000/api/v1/user/register
 
 export { app }
