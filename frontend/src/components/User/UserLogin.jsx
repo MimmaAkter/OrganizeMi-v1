@@ -31,8 +31,10 @@ const UserLogin = () => {
       //setError("")
       try{
         Login(formObj).then(res=>{
+          console.log("logging in user",res)
           if(res){
             getCurrentUser().then(userData=>{
+              console.log("current user", userData)
                 dispatch(authLogin({userData}))
             })
           }
