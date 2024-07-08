@@ -33,7 +33,7 @@ const Create= async (req,res) => {
         username: username
     })
     
-
+console.log("user in server", user)
     return res.status(201).json(
         new ApiResponse(200, user, "User registered Successfully")
     )
