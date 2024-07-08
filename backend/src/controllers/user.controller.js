@@ -190,13 +190,19 @@ const Login = async (req, res) =>{
 }
 
 const getCurrentUser = async(req, res) => {
-    return res
-    .status(200)
-    .json(new ApiResponse(
-        200,
-        req.user,
-        "User fetched successfully"
+    if(req.user){
+        return res
+        .status(200)
+        .json(new ApiResponse(
+            200,
+            req.user,
+            "User fetched successfully"
     ))
+    }
+    else{
+        return null;
+    }
+    
 }
 
 const Logout = async(req, res) => {
