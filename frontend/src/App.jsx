@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     getCurrentUser()
     .then((userData) => {
-      console.log(userData)
+      console.log("current user in app",userData)
       if (userData) {
         dispatch(login({userData}))
       } else {
