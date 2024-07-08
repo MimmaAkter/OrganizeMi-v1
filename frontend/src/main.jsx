@@ -38,7 +38,7 @@ const router = createBrowserRouter([
             element: <ResetPassword/>,
         },
         {
-            path: "/login",
+            path: "/Login",
             element: (
                 <AuthLayout authentication={false}>
                     <UserLogin />
