@@ -43,6 +43,7 @@ const Read = async () => {
     }
     */
    return await axios.post(URL,formData)
+       console.log("form data",formData)
     .then((res)=>{
         console.log("created user", res)
         if(res.status===200){
