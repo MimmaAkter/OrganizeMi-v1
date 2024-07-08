@@ -17,9 +17,9 @@ app.use(cookieParser())
 //app.use('../public',express.static("files"))
 
 //routes import
-import userRouter from './routes/user.route.js'
-import profileRouter from './routes/profile.route.js'
-import uploadFileRouter from './routes/uploadFile.route.js'
+import userRouter from './src/routes/user.route.js'
+import profileRouter from './src/routes/profile.route.js'
+import uploadFileRouter from './src/routes/uploadFile.route.js'
 
 //routes declaration
 app.use("/api/v1/user", userRouter)
