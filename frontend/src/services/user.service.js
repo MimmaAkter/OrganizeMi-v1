@@ -139,7 +139,7 @@ const getCurrentUser = async () => {
     try{
         const URL = "/api/v1/user/getCurrentUser"
         return await axios.get(URL).then((res)=>{
-            console.log(res)
+            console.log("current user in service",res)
             if(res){
                return (alert(res.data.message),res.data.data);
             }
