@@ -32,8 +32,7 @@ const Create= async (req,res) => {
         password:password,
         username: username
     })
-    
-console.log("user in server", user)
+
     return res.status(201).json(
         new ApiResponse(200, user, "User registered Successfully")
     )
@@ -192,6 +191,7 @@ const Login = async (req, res) =>{
 
 const getCurrentUser = async(req, res) => {
     console.log(req.user)
+    if(res){
     return res
     .status(200)
     .json(new ApiResponse(
@@ -199,6 +199,11 @@ const getCurrentUser = async(req, res) => {
         req.user,
         "Current User fetched successfully"
     ))
+    }
+    else{
+        return null;
+    }
+    
 }
 
 const Logout = async(req, res) => {
