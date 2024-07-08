@@ -120,7 +120,7 @@ const Update = async (formObj,id) => {
         return await axios.post(URL,PostBody).then((res)=>{
             console.log(res)
             if(res.status===200){
-               return (alert(res.data.message),true);
+               return (alert(res.message),true);
             }
             else{
                return (alert('Invalid'),false);
@@ -137,8 +137,8 @@ const getCurrentUser = async () => {
     try{
         const URL = "/api/v1/user/getCurrentUser"
         return await axios.get(URL).then((res)=>{
-            console.log(res.data.data)
-            if(res.data.data){
+            console.log(res)
+            if(res){
                return (alert(res.data.message),res.data.data);
             }
             else{
