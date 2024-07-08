@@ -11,7 +11,7 @@ const ForgotPassword = () => {
     const handleSubmit = (e) => {
       console.log(email)
       e.preventDefault();
-      Axios.post("http://localhost:5050/api/v1/user/forgot-password", {
+      Axios.post("https://organizemi-v1-server.onrender.com/api/v1/user/forgot-password", {
         email,
       }).then(response => {
         console.log(response)
