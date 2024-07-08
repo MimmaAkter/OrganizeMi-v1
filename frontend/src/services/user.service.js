@@ -119,7 +119,7 @@ const Update = async (formObj,id) => {
 
         return await axios.post(URL,PostBody).then((res)=>{
             console.log(res)
-            if(res.data.statusCode===200){
+            if(res.status===200){
                return (alert(res.data.message),true);
             }
             else{
