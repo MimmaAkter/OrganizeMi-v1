@@ -201,7 +201,7 @@ const getCurrentUser = async(req, res) => {
     ))
     }
     else{
-        return null;
+        return false;
     }
     
 }
