@@ -190,7 +190,7 @@ const Login = async (req, res) =>{
 }
 
 const getCurrentUser = async(req, res) => {
-    if(req.user){
+    if(req.user!=null){
         return res
         .status(200)
         .json(new ApiResponse(
