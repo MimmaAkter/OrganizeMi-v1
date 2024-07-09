@@ -2,6 +2,7 @@ import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
 import path from 'path'
+import { fileURLToPath } from "url"
 
 const app = express()
 
@@ -27,9 +28,9 @@ app.use("/api/v1/profile", profileRouter)
 app.use("/api/v1/uploadFile", uploadFileRouter)
 
 // Add React Front End Routing
-
-const _dirname=path._dirname("");
-const buildPath =path.join(_dirname,"../frontend/dist");
+const __filename = fileURLToPath(import.meta.url)
+const __dirname=path.dirname(__filename);
+const buildPath =path.join(__dirname,"../frontend/dist");
 
 app.use(express.static(buildPath));
 
