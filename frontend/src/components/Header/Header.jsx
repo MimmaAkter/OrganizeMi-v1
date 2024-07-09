@@ -57,7 +57,7 @@ const Header = () => {
                     <button className="flex justify-end md:hidden ring-1 ring-black rounded" onClick={showNav}>
                       <i className="fas fa-bars text-white w-9 h-9 flex justify-center items-center hover:text-black"></i>
                     </button>
-                    <div className="flex items-center lg:order-2">
+                    <div className={`${toggle ? " flex" : " hidden"}flex items-center lg:order-2`}>
 
                         <Link
                             to="#"
