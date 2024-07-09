@@ -118,7 +118,7 @@ const Update = async (formObj,id) => {
         email:formObj.email,
         password:formObj.password
     }
-
+console.log('login service', URL, PostBody)
         return await axios.post(URL,PostBody).then((res)=>{
             console.log('user in service',res)
             if(res.data.statusCode===200){
