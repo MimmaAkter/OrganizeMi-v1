@@ -18,11 +18,7 @@ function App() {
     if(!loading){
       getCurrentUser()
     .then((userData) => {
-<<<<<<< HEAD
       console.log('current user in app',userData)
-=======
-      console.log("current user in app",userData)
->>>>>>> 7c05932d03f895a6de02df1b43896edb0152d547
       if (userData) {
         dispatch(login({userData}))
       } else {
