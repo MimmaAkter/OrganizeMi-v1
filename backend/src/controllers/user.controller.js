@@ -197,7 +197,7 @@ const getCurrentUser = async(req, res) => {
         200,
         req.user,
         "Current User fetched successfully"
-    )
+    ))
 }
 
 const Logout = async(req, res) => {
