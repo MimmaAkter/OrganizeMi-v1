@@ -146,6 +146,7 @@ const Login = async (req, res) =>{
     //send cookie
 
     const {email, username, password} = req.body
+    console.log('user in controller', email, password)
     if (!username && !email) {
       return res.json(new ApiError(400, "username or email is required"));
     }
