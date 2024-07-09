@@ -15,9 +15,10 @@ function App() {
   //const {user} = useContext(UserContext)
 
   useEffect(() => {
-    getCurrentUser()
+    if(!loading){
+      getCurrentUser()
     .then((userData) => {
-      console.log(userData)
+      console.log('current user in app',userData)
       if (userData) {
         dispatch(login({userData}))
       } else {
@@ -25,7 +26,11 @@ function App() {
       }
     })
     .finally(() => setLoading(false))
-  }, [])
+  }
+  else{
+    setLoading(false)
+  }
+}, [])
   console.log("App loading",loading)
   return !loading ? (
     <div className='min-h-screen flex flex-wrap content-between'>

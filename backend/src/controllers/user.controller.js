@@ -191,7 +191,7 @@ const Login = async (req, res) =>{
 }
 
 const getCurrentUser = async(req, res) => {
-    console.log(req.user)
+    console.log('current user in controller',req.user)
     return res
     .status(200)
     .json(new ApiResponse(

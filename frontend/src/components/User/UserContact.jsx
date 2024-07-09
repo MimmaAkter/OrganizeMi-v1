@@ -23,7 +23,7 @@ const UserContact = () => {
             e.preventDefault()
             Create(formObj)
             .then(result=>{
-                navigate('/ReadUser')
+                navigate('/Login')
             })
             .catch(err=>console.log(err))
             //alert(JSON.stringify(formObj))
