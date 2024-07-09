@@ -196,7 +196,8 @@ const getCurrentUser = async(req, res) => {
     .json(new ApiResponse(
         200,
         req.user,
-        "Current User fetched successfully"))
+        "Current User fetched successfully"
+    ))
 }
 
 const Logout = async(req, res) => {
