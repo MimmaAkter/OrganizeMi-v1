@@ -11,7 +11,7 @@ const ResetPassword = () => {
     const handleSubmit = (e) => {
       e.preventDefault();
       console.log(resetPassToken)
-      Axios.post("http://localhost:5050/api/v1/user/reset-password/"+resetPassToken, {
+      Axios.post("https://organizemi-v1-server.onrender.com/api/v1/user/reset-password/"+resetPassToken, {
         password,
       }).then(response => {
         console.log(response)

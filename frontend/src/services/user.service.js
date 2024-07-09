@@ -43,7 +43,9 @@ const Read = async () => {
     }
     */
    return await axios.post(URL,formData)
+       console.log("form data",formData)
     .then((res)=>{
+        console.log("created user", res)
         if(res.status===200){
            return true;
         }
@@ -118,7 +120,7 @@ const Update = async (formObj,id) => {
     }
 
         return await axios.post(URL,PostBody).then((res)=>{
-            console.log(res)
+            console.log(res.data.statusCode)
             if(res.data.statusCode===200){
                return (alert(res.data.message),true);
             }
@@ -137,9 +139,9 @@ const getCurrentUser = async () => {
     try{
         const URL = "/api/v1/user/getCurrentUser"
         return await axios.get(URL).then((res)=>{
-            console.log(res.data.data)
-            if(res.data.data){
-               return (alert(res.data.message),res.data.data);
+            console.log("current user in service",res)
+            if(res){
+               return (res);
             }
             else{
                return (null);

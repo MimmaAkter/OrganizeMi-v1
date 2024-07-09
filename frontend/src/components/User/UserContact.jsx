@@ -23,6 +23,10 @@ const UserContact = () => {
             e.preventDefault()
             Create(formObj)
             .then(result=>{
+<<<<<<< HEAD
+=======
+                console.log("user created", result)
+>>>>>>> 7c05932d03f895a6de02df1b43896edb0152d547
                 navigate('/Login')
             })
             .catch(err=>console.log(err))
