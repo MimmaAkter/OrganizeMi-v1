@@ -14,6 +14,7 @@
     "@heroicons/react": "^2.1.4",
     "@reduxjs/toolkit": "^2.2.5",
     "axios": "^1.7.2",
+    "backend": "file:../backend",
     "lucide-react": "^0.390.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,16 +22,18 @@
     "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.19",
+    "daisyui": "^4.12.10",
     "eslint": "^8.57.0",
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4",
     "vite": "^5.2.0"
   }
 }

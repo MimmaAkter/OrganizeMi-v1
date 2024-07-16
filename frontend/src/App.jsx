@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 //import UserContext from './contexts/UserContext.js';
 import { getCurrentUser } from './services/user.service.js'
 import { login, logout } from "./store/authSlice"
-import { Container, Header } from './components/index.js'
+import { Container, Header, Navbar2, Nav, Footer, NewHeader,FlyoutMenu } from './components/index.js'
 //import { Footer } from './components/Footer/Footer.jsx'
 import { Outlet } from 'react-router-dom'
 
@@ -35,12 +35,13 @@ function App() {
   return !loading ? (
     <div className='min-h-screen flex flex-wrap content-between'>
       <div className='w-full block'>
-        <Header />
+        <FlyoutMenu />
         <main>
           <Container>
             <Outlet />
           </Container>
         </main>
+        <Footer/>
       </div>
     </div>
   ) : null

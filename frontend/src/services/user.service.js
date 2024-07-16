@@ -43,7 +43,6 @@ const Read = async () => {
     }
     */
    return await axios.post(URL,formData)
-       console.log("form data",formData)
     .then((res)=>{
         console.log("created user", res)
         if(res.status===200){
@@ -120,7 +119,7 @@ const Update = async (formObj,id) => {
     }
 
         return await axios.post(URL,PostBody).then((res)=>{
-            console.log(res.data.statusCode)
+            console.log(res)
             if(res.data.statusCode===200){
                return (alert(res.data.message),true);
             }
