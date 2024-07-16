@@ -6,8 +6,13 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon -r dotenv/config --experimental-json-modules server.js",
+<<<<<<< HEAD
     "start": "nodemon server.js",
     "build": "npm install --prefix ../frontend && npm run build --prefix ../frontend && npm install nodemon server.js "
+=======
+    "start": "node server.js",
+    "build":"npm install --prefix ../frontend && npm run build --prefix ../frontend && npm install"
+>>>>>>> 853108177d51fb0705c5ff04d240800a95dabadd
   },
   "keywords": [
     "doc",
