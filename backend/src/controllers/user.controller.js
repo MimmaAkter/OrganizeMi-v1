@@ -260,7 +260,7 @@ const ForgotPassword = async (req, res) => {
         from: '"Mimma Akter" <mimma@gmail.com>',
         to: email,
         subject: "Reset Password",
-        text: `https://organizemi-v1-client.onrender.com/reset-password/${encodedToken}`,
+        text: `https://organizemi-v1-server.onrender.com/reset-password/${encodedToken}`,
       };
 
       transporter.sendMail(mailOptions, function (error, info) {

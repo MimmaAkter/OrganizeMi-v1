@@ -31,7 +31,7 @@ const UserLogin = () => {
       //setError("")
       try{
         Login(formObj).then(res=>{
-          console.log("logging in user",res)
+          console.log("user in UserLogin",res)
           if(res){
             getCurrentUser().then(userData=>{
               console.log("current user", userData)

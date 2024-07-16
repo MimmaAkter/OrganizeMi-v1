@@ -1,14 +1,11 @@
 import React from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import { LogoutBtn } from '../index.js'
-
 import {useSelector} from 'react-redux'
 
 const Header = () => {
     const authStatus = useSelector((state) => state.auth.status)
     const navigate = useNavigate()
-
-    console.log("auth status in header", authStatus)
   
     const navItems = [
       {
@@ -38,9 +35,6 @@ const Header = () => {
     },
     ]
 
-    const logo = {
-        width:"250px",height:"70px"
-    }
 
     //console.log("header authstatus active", navItems.active)
     return (
