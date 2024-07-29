@@ -6,14 +6,11 @@ import {useSelector} from 'react-redux'
 const Header = () => {
     const authStatus = useSelector((state) => state.auth.status)
     const navigate = useNavigate()
-<<<<<<< HEAD
-=======
 
     const [toggle, setToggle] = useState(false);
     const showNav = () => {
         setToggle(!toggle);
       };
->>>>>>> 853108177d51fb0705c5ff04d240800a95dabadd
   
     const navItems = [
       {
