@@ -38,7 +38,7 @@ app.use(express.static(buildPath));
 app.get("/",function(req,res,next){
   res.sendFile(path.join(__dirname,"../frontend/dist/index.html"),function(err){
     if(err){
-        res.static(500).send(err);
+        res.status(500).send(err);
     }
   });
 });
