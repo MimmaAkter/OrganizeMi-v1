@@ -27,99 +27,6 @@ const FlyoutMenu = () => {
   const navigation = {
     categories: [
       {
-        id: 'elders',
-        name: 'Elders',
-        active: authStatus,
-        sections: [
-          {
-            id: 'clothing',
-            name: 'Clothing',
-            items: [
-              { name: 'Tops', href: '/ReadUser' },
-              { name: 'Dresses', href: '#' },
-            ],
-          },
-          {
-            id: 'accessories',
-            name: 'Accessories',
-            items: [
-              { name: 'Watches', href: '#' },
-            ],
-          },
-          {
-            id: 'brands',
-            name: 'Brands',
-            items: [
-              { name: 'Full Nelson', href: '#' },
-              { name: 'My Way', href: '#' },
-              { name: 'Re-Arranged', href: '#' },
-            ],
-          },
-        ],
-      },
-      {
-        id: 'teenagers',
-        name: 'Teenagers',
-        active: authStatus,
-        sections: [
-          {
-            id: 'clothing',
-            name: 'Clothing',
-            items: [
-              { name: 'Tops', href: '/ReadUser' },
-              { name: 'Dresses', href: '#' },
-            ],
-          },
-          {
-            id: 'accessories',
-            name: 'Accessories',
-            items: [
-              { name: 'Watches', href: '#' },
-            ],
-          },
-          {
-            id: 'brands',
-            name: 'Brands',
-            items: [
-              { name: 'Full Nelson', href: '#' },
-              { name: 'My Way', href: '#' },
-              { name: 'Re-Arranged', href: '#' },
-            ],
-          },
-        ],
-      },
-      {
-        id: 'kids',
-        name: 'Kids',
-        active: authStatus,
-        sections: [
-          {
-            id: 'clothing',
-            name: 'Clothing',
-            items: [
-              { name: 'Tops', href: '/ReadUser' },
-              { name: 'Dresses', href: '#' },
-            ],
-          },
-          {
-            id: 'accessories',
-            name: 'Accessories',
-            items: [
-              { name: 'Watches', href: '#' },
-            ],
-          },
-          {
-            id: 'brands',
-            name: 'Brands',
-            items: [
-              { name: 'Full Nelson', href: '#' },
-              { name: 'My Way', href: '#' },
-              { name: 'Re-Arranged', href: '#' },
-            ],
-          },
-        ],
-      },
-      {
         id: 'women',
         name: 'Women',
         active: authStatus,
@@ -136,7 +43,7 @@ const FlyoutMenu = () => {
             id: 'accessories',
             name: 'Accessories',
             items: [
-              { name: 'Watches', href: '#' },
+              { name: 'Watches', href: '/Create' },
             ],
           },
           {

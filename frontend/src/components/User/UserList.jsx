@@ -32,8 +32,6 @@ const UserList = () => {
   }
 */
     const handleDelete = async (id) => {
-      console.log(id);
-
         await Delete(id)
         //await axios.delete(`http://localhost:8000/api/delete/${userId}`)
         window.location.reload()

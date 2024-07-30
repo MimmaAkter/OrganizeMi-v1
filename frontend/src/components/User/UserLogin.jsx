@@ -31,11 +31,10 @@ const UserLogin = () => {
       //setError("")
       try{
         Login(formObj).then(res=>{
-          console.log("user in UserLogin",res)
           if(res){
             getCurrentUser().then(userData=>{
-              console.log("current user", userData)
-                dispatch(authLogin({userData}))
+              window.localStorage.setItem('isLoggedIn',true)
+              dispatch(authLogin({userData}))
             })
           }
           //alert('Invalid Login');

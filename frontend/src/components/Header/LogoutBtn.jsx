@@ -20,7 +20,8 @@ function LogoutBtn() {
     const dispatch = useDispatch()
     const logoutHandler = () => {
         Logout().then(() => {
-            dispatch(logout())
+          window.localStorage.removeItem('isLoggedIn')
+          dispatch(logout())
         })
     }
   return (

@@ -11,13 +11,12 @@ import { Outlet } from 'react-router-dom'
 function App() {
   const [loading, setLoading] = useState(true)
   const dispatch = useDispatch()
-
+  const isLoggedIn = window.localStorage.getItem('isLoggedIn')
   //const {user} = useContext(UserContext)
 
   useEffect(() => {
-    if(!loading){
-      getCurrentUser()
-    .then((userData) => {
+    if(isLoggedIn){
+      getCurrentUser().then((userData) => {
       console.log('current user in app',userData)
       if (userData) {
         dispatch(login({userData}))
@@ -31,7 +30,6 @@ function App() {
     setLoading(false)
   }
 }, [])
-  console.log("App loading",loading)
   return !loading ? (
     <div className='min-h-screen flex flex-wrap content-between'>
       <div className='w-full block'>
