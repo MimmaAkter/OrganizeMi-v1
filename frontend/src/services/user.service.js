@@ -117,7 +117,6 @@ const Update = async (formObj,id) => {
         email:formObj.email,
         password:formObj.password
     }
-console.log('login service', URL, PostBody)
         return await axios.post(URL,PostBody).then((res)=>{
             if(res.data.statusCode===200){
                return (alert(res.data.message),true);
@@ -137,7 +136,6 @@ const getCurrentUser = async () => {
     try{
         const URL = "/api/v1/user/getCurrentUser"
         return await axios.get(URL).then((res)=>{
-            console.log("current user in service",res)
             if(res){
                return (res);
             }

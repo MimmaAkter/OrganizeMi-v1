@@ -28,16 +28,17 @@ app.use("/api/v1/profile", profileRouter)
 app.use("/api/v1/uploadFile", uploadFileRouter)
 
 // Add React Front End Routing
-const __filename = fileURLToPath(import.meta.url)
+
+const __filename =fileURLToPath(import.meta.url);
 const __dirname=path.dirname(__filename);
-const buildPath =path.join(__dirname,"../frontend/dist");
+const buildPath =path.join(_dirname,"../frontend/dist");
 
 app.use(express.static(buildPath));
 
 app.get("/",function(req,res,next){
   res.sendFile(path.join(__dirname,"../frontend/dist/index.html"),function(err){
     if(err){
-        res.static(500).send(err);
+        res.status(500).send(err);
     }
   });
 });
