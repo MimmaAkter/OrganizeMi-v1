@@ -13,8 +13,9 @@ const UserList = () => {
     //const [userId, setUserId] = useState()
 
     useEffect( ()=>{
+        if(DataList)
        loadUsers();
-    },[])
+    },[DataList])
 
     const loadUsers = async () => {
       const result = await Read();
