@@ -6,8 +6,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon -r dotenv/config --experimental-json-modules server.js",
-    "start": "node server.js && npx vite",
-    "build": "npm install && npx vite build"
+    "start": "node server.js && npx vite --prefix ../frontend",
+    "build": "npm install && npm install --prefix ../frontend && npx vite build --prefix ../frontend"
   },
   "keywords": [
     "doc",
