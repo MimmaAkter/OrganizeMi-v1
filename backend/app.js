@@ -1,8 +1,10 @@
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
+/*
 import path from 'path'
 import { fileURLToPath } from "url"
+*/
 const app = express()
 
 app.use(cors({
@@ -32,6 +34,7 @@ app.use("/api/v1/profile", profileRouter)
 app.use("/api/v1/uploadFile", uploadFileRouter)
 
 // Add React Front End Routing
+/*
 const __filename =fileURLToPath(import.meta.url);
 const __dirname=path.dirname(__filename);
 const buildPath =path.join(__dirname,"../frontend/dist");
@@ -45,6 +48,7 @@ app.get("/",function(req,res,next){
     }
   });
 });
+*/
 // http://localhost:8000/api/v1/user/register
 
 export { app }
