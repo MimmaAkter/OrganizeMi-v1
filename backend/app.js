@@ -31,7 +31,7 @@ app.use("/api/v1/uploadFile", uploadFileRouter)
 
 const __filename =fileURLToPath(import.meta.url);
 const __dirname=path.dirname(__filename);
-const buildPath =path.join(_dirname,"../frontend/dist");
+const buildPath =path.join(__dirname,"../frontend/dist");
 
 app.use(express.static(buildPath));
 
