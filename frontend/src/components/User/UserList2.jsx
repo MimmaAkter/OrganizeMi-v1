@@ -7,8 +7,9 @@ const UserList2 = () => {
   const [users, setUser] = useState([]);
 
   useEffect(() => {
+    if(users)
     loadUsers();
-  }, []);
+  }, [users]);
 
   const loadUsers = async () => {
     //const result = await axios.get("http://localhost:5050/api/v1/profile/Read");
