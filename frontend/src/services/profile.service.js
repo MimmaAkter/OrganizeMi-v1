@@ -4,7 +4,7 @@ const Read = async () => {
     const URL = "/api/v1/profile/Read"
     const result = await axios.get(URL);
     console.log(result)
-    return result.data.reverse();
+    return result.data.data.reverse();
   };
 
 const ReadById = async (id) => {
