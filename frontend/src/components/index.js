@@ -8,6 +8,7 @@ import Footer from './Footer/Footer.jsx';
 import Navbar2 from './Navbar/Navbar2.jsx';
 import NewHeader from './Header/NewHeader.jsx';
 import FlyoutMenu from './FlyoutMenu/FlyoutMenu.jsx';
+import UserList2 from './User/UserList2.jsx';
 
 export {
     AuthLayout,
@@ -19,6 +20,7 @@ export {
     Footer,
     Navbar2,
     NewHeader,
-    FlyoutMenu
+    FlyoutMenu,
+    UserList2
 
 }

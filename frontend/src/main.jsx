@@ -15,7 +15,7 @@ import UserLogin from './components/User/UserLogin.jsx';
 //import UserContextProvider from './contexts/UserContextProvider.jsx'
 import { Provider } from 'react-redux';
 import store from './store/store.js';
-import { AuthLayout } from './components/index.js'
+import { AuthLayout, UserList2 } from './components/index.js'
 import ForgotPassword from './components/User/ForgotPassword.jsx'
 import ResetPassword from './components/User/ResetPassword.jsx';
 
@@ -42,6 +42,14 @@ const router = createBrowserRouter([
             element: (
                 <AuthLayout authentication={false}>
                     <UserLogin />
+                </AuthLayout>
+            ),
+        },
+        {
+            path: "/Read",
+            element: (
+                <AuthLayout authentication={false}>
+                    <UserList2 />
                 </AuthLayout>
             ),
         },

@@ -1,15 +1,21 @@
 import express from "express"
 import cors from "cors"
 import cookieParser from "cookie-parser"
+/*
 import path from 'path'
 import { fileURLToPath } from "url"
-
+*/
 const app = express()
 
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
     credentials: true
 }))
+
+app.use(function(req, res, next) {
+  res.header('access-control-allow-origin', req.header('origin') );
+  next();
+});
 
 app.use(express.json({limit: "16kb"}))
 app.use(express.urlencoded({extended: true, limit: "16kb"}))
@@ -28,10 +34,10 @@ app.use("/api/v1/profile", profileRouter)
 app.use("/api/v1/uploadFile", uploadFileRouter)
 
 // Add React Front End Routing
-
+/*
 const __filename =fileURLToPath(import.meta.url);
 const __dirname=path.dirname(__filename);
-const buildPath =path.join(_dirname,"../frontend/dist");
+const buildPath =path.join(__dirname,"../frontend/dist");
 
 app.use(express.static(buildPath));
 
@@ -42,7 +48,7 @@ app.get("/",function(req,res,next){
     }
   });
 });
-
+*/
 // http://localhost:8000/api/v1/user/register
 
 export { app }
