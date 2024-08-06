@@ -14,6 +14,7 @@ const UserList2 = () => {
   const loadUsers = async () => {
     //const result = await axios.get("http://localhost:5050/api/v1/profile/Read");
     const result = await Read();
+    if (result)
     setUser(result);
   };
 /*
