@@ -92,7 +92,7 @@ const FlyoutMenu = () => {
     ],
     pages: [
       { name: 'Home', href: '/', active:!authStatus },
-      { name: 'Contact Us', href: '/ReadUser', active:!authStatus },
+      { name: 'Contact Us', href: '/Read', active:!authStatus },
     ],
     settings: [
       { name: 'Sign in', href: '/Login', active:!authStatus },
