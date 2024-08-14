@@ -16,6 +16,9 @@
     "cloud",
     "mern"
   ],
+  "engines":{
+    "node":">=21.6.2"
+  }
   "author": "mimma akter",
   "license": "ISC",
   "dependencies": {
