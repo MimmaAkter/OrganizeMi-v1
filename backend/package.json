@@ -17,7 +17,7 @@
     "mern"
   ],
   "engines":{
-    "node":">=21.6.2"
+    "node":">=20.15.1"
   }
   "author": "mimma akter",
   "license": "ISC",
